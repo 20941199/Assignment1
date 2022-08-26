@@ -1,0 +1,95 @@
+<html>
+<style>
+.idle
+{
+  background-color:#e7e7e7
+}
+.selected
+{
+  background-color:#008CBA
+}
+
+</style>
+
+    <body>
+
+		Clicked cell is : <a id="clicked"></a>
+
+<br>
+
+<table border=1>
+<colgroup>
+<col style="width: 30px">
+<col style="width: 30px">
+<col style="width: 30px">
+<col style="width: 30px">
+<col style="width: 30px">
+<col style="width: 30px">
+</colgroup>
+<thead>
+  <tr>
+    <td></td>
+    <td>A</td>
+    <td>B</td>
+    <td>C</td>
+    <td>D</td>
+    <td>E</td>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td >1</td>
+    <td ><input type="button" id="A1" value="0"></td>
+    <td ><input type="button" id="B1" value="0"></td>
+    <td ><input type="button" id="C1" value="0"></td>
+    <td ><input type="button" id="D1" value="0"></td>
+    <td ><input type="button" id="E1" value="0"></td>
+  </tr>
+  <tr>
+    <td >2</td>
+    <td ><input type="button" id="A2" value="0"></td>
+    <td ><input type="button" id="B2" value="0"></td>
+    <td ><input type="button" id="C2" value="0"></td>
+    <td ><input type="button" id="D2" value="0"></td>
+    <td ><input type="button" id="E2" value="0"></td>
+  </tr>
+  <tr>
+    <td >3</td>
+    <td ><input type="button" id="A3" value="0"></td>
+    <td ><input type="button" id="B3" value="0"></td>
+    <td ><input type="button" id="C3" value="0"></td>
+    <td ><input type="button" id="D3" value="0"></td>
+    <td ><input type="button" id="E3" value="0"></td>
+  </tr>
+  <tr>
+    <td >4</td>
+    <td ><input type="button" id="A4" value="0"></td>
+    <td ><input type="button" id="B4" value="0"></td>
+    <td ><input type="button" id="C4" value="0"></td>
+    <td ><input type="button" id="D4" value="0"></td>
+    <td ><input type="button" id="E4" value="0"></td>
+  </tr>
+  <tr>
+    <td >5</td>
+    <td ><input type="button" id="A5" value="0"></td>
+    <td ><input type="button" id="B5" value="0"></td>
+    <td ><input type="button" id="C5" value="0"></td>
+    <td ><input type="button" id="D5" value="0"></td>
+    <td ><input type="button" id="E5" value="0"></td>
+  </tr>
+</tbody>
+</table>
+<br>
+    <script>
+			//put your function here
+      const buttons = document.getElementsByTagName("input");
+      var buttonsCount = buttons.length;
+      for (var i = 0; i <= buttonsCount; i += 1) {
+          buttons[i].onclick = function(e) {
+            document.getElementById('clicked').innerHTML = this.id;
+            document.getElementById(this.id).style.background = "blue";
+          };
+      }
+	</script>
+    </body>
+</html>
